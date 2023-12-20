@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: #8cc461;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#score {
+  font-size: 20px;
+}
+
+.scoreSection {
+  width: 800px;
+  height: 158px;
+  border-radius: 13px;
+  border: 2px solid white;
+  margin: 0 auto;
+  margin-top: 4rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexrow {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 9rem;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 9px;
+}
+
+.scoreCountTitle {
+  text-align: center;
+  font-size: 17px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#pcScoreCount,
+#userScoreCount {
+  font-size: 60px;
+}
+
+.scoreTitle {
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+}
+
+.score {
+  background-color: white;
+}
+
+#rock {
+  border: 12px solid #0074b6;
+}
+
+#paper {
+  border: 12px solid #ffa943;
+}
+
+#scissor {
+  border: 12px solid #bd00ff;
+}
+
+#choices {
+  width: 30%;
+  height: 22rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.flex-visible-choices{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.choiceBtn {
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: white;
+}
+
+.choiceBtn img{
+  z-index: 10;
+
+}
+.lines::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 30%;
+  border: 8px solid rgb(87, 87, 87);
+  z-index: -1;
+}
+
+
+
+.lines:nth-child(1)::before {
+  right: 25%; 
+}
+
+.lines:nth-child(2)::before {
+  right: 13%; 
+  top: 50%;
+  transform: translateX(-18%) translateY(-50%) rotate(-65deg);
+}
+
+.lines:nth-child(3)::before {
+  right: 41%; 
+  top: 50%;
+  transform: translateX(-18%) translateY(-50%) rotate(-122deg);
+}
+
+#results {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 8rem;
+}
+
+.flex-visible{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.resultBox {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.resultBox button{
+  border-radius: 0;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  width: 154px;
+  height: 44px;
+  text-transform: uppercase;
+}
+
+
+
+/* MODAL STYLING */
+#myBtn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 119px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 21px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  right: 2rem;
+  bottom: 4rem;
+  z-index: 100;
+}
+
+
+.modal-content {
+  background-color: #004429;
+  color: white;
+  margin: 15% auto; 
+  padding: 20px 30px;
+  border: 7px solid white;
+  border-radius: 13px;
+  width: 298px;
+  height: 345px;
+  font-size: 15px;
+  position: relative;
+  z-index: 20;
+}
+
+.modal-content h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-content ul li {
+  list-style: square;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  right: -1.3rem;
+  top: -1.6rem;
+  border: 5px solid white;
+  color: white;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 44px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+
+#nextBtn{
+  position: absolute;
+  right: 10rem;
+  bottom: 2rem;
+}
+
+
+#winImg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#winTitle{
+  font-size: 91px;
+  color: white;
+}

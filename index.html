@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+
+        <!-- SCOREBOARD SECTION -->
+        <div class="scoreSection">
+            <div class="scoreTitle">
+                ROCK<br> PAPER<br> SCISSORS
+            </div>
+
+            <div class="flexrow">
+
+                <div class="flexcolumn">
+                    <div class="scoreCountTitle">Computer<br> Score</div>
+                    <div id="pcScoreCount">0</div>
+                </div>
+
+             
+                <div class="flexcolumn">
+                    <div class="scoreCountTitle">User<br> Score</div>
+                    <div id="userScoreCount">0</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ROCK PAPER SCISSOR CHOICES -->
+        <div id="choices">
+            <div class="flex-visible-choices">
+                <button class="choiceBtn lines" id="rock" onclick="play('rock')">
+                    <img src="./Assets/rock.png" alt="">
+                </button>
+                <button class="choiceBtn lines" id="paper" onclick="play('paper')">
+                    <img src="./Assets/paper.png" alt="">
+                </button>
+                <button class="choiceBtn lines" id="scissor" onclick="play('scissor')">
+                    <img src="./Assets/scissor.png" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- RESULT PAGE -->
+        <div id="results" style="display: none;">
+            <div class="flex-visible">
+                <div class="userChoice choiceBtn">
+                    <img src="" alt="" id="userImg">
+                </div>
+                <div class="resultBox">
+                    <h2 id="resultTitle"></h2>
+                    <button class="button" onclick="playAgain()">Play Again</button>
+                </div>
+                <div class="pcChoice choiceBtn">
+                    <img src="" alt="" id="pcImg">
+                </div>
+            </div>
+        </div>
+
+
+       
+        <button id="myBtn" class="button" onclick="openModal()">RULES</button>
+        <button id="nextBtn" class="button" onclick="window.location.href='gameEnd.html'"
+            style="display: none;">NEXT</button>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">×</span>
+                <h1>Game Rules</h1>
+                <ul>
+                    <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock,
+                        paper, scissors.”</li>
+                    <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                    <li>If both players lay down the same hand, each player lays down another hand</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
